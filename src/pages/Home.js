@@ -21,6 +21,7 @@ function Home() {
     const [gameStatus, setGameStatus]                   = useState('')
     const [selectedDominoId, setSelectedDominoId]       = useState(null)
     const [matchedDominoId, setMatchedDominoId]         = useState(null)
+    // eslint-disable-next-line 
     const [animatingDominoId, setAnimatingDominoId]     = useState(null)
 
     const wrongSoundRef                                 = useRef(null)
