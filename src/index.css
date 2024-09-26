@@ -1,13 +1,189 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto";
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+ul, li {
+  list-style: none;
+}
+button {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+}
+button:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.app {
+  background: radial-gradient(circle, #e70221 0%, #c30035 22%, #e20045 77%, #e30060 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.button-colored {
+  width: 200px;
+  background: linear-gradient(180deg, #ffffff 0%, #2db922 50%, #71fc45 100%);
+  border-top: solid 1px #8eff6c;
+}
+
+
+
+.home {
+  background: radial-gradient(circle, #e70221 0%, #c30035 22%, #e20045 77%, #e30060 100%);
+  padding: 20px;
+}
+.home .first-plan {
+  background: grey;
+  display: flex;
+  align-items: center;
+}
+.second-plan {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.play-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.play-btn img {
+  width: 23px;
+  height: 23px;
+}
+.pioche-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+}
+.pioche-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: lightblue; /* Changez la couleur selon vos besoins */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.pioche-btn:hover {
+  background-color: deepskyblue;
+}
+.domino-shake {
+  animation: shake 0.3s;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 0); }
+  25% { transform: translate(-1px, 0); }
+  50% { transform: translate(1px, 0); }
+  75% { transform: translate(-1px, 0); }
+  100% { transform: translate(0, 0); }
+}
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+@keyframes fadeOut {
+  0% {
+    
+    transform: scale(1.05);
+  }
+  50% {
+    
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+ 
+
+
+
+
+.domino {
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px;
+  margin: 10px;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 4px 8px #00000033; /* Ombre pour l'effet 3D */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.domino:hover {
+  transform: translateY(-4px); /* Élever le domino au survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.bar-center {
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  background-color: #c2c2c2;
+  right: 49%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.half-domino {
+  background: grey;
+}
+.container-dots {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+.row-dots {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.dot {
+  background: black;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.dot-1 {
+  background-color: #fc0494;
+}
+.dot-2 {
+  background-color: #ff8800;
+}
+.dot-3 {
+  background-color: #94d0e4;
+}
+.dot-4 {
+  background-color: #be00be;
+}
+.dot-5 {
+  background-color: #45e445;
+}
+.dot-6 {
+  background-color: #0000b4;
 }
